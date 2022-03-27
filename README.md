@@ -1,6 +1,6 @@
 # 📄 ull-esit-inf-dsi-21-22-prct06-generics-solid-Dncz
 
-**Práctica:** Práctica 6: Clases e interfaces genéricas. Principios SOLID.
+**Práctica 6:** Clases e interfaces genéricas. Principios SOLID.
 
 **Universidad:** Universidad de La Laguna
 
