@@ -1,57 +1,65 @@
 import {Arithmeticable} from "./clase";
 
-
 /**
  * Clase complex
  */
-export class Complex implements Arithmeticable<number> {
-  constructor(private complexCollection: number[]) {
-    this.complexCollection = complexCollection;
-  }
-
+export class Complex implements Arithmeticable<Complex> {
   /**
-   * Getter de la colección de números
+   * Constructor
+   * @param {number} real Parte real
+   * @param {number} imaginaria Parte imaginaria
    */
-  public getComplexCollection(): number[] {
-    return this.complexCollection;
+  constructor(private real: number, private imaginaria: number) {
   }
 
   /**
    * Suma dos números
-   * @param {numer} number1
-   * @param {numer} number2
+   * @param {numer} numero2
    * @returns {numer} suma
    */
-  add(number1: number, number2: number): number {
-    return number1 + number2;
+  add(numero2: Complex): Complex {
+    return new Complex(this.real + numero2.real, this.imaginaria + numero2.imaginaria);
   }
   /**
    * Resta dos números
-   * @param {numer} number1
-   * @param {numer} number2
+   * @param {numer} numero2
    * @returns {numer} resta
    */
-  substract(number1: number, number2: number): number {
-    return number1 - number2;
+  substract(numero2: Complex): Complex {
+    return new Complex(this.real - numero2.real, this.imaginaria - numero2.imaginaria);
   }
 
   /**
    * Multiplica dos números
-   * @param {numer} number1
-   * @param {numer} number2
+   * @param {numer} numero2
    * @returns {numer} multiplicación
    */
-  multiply(number1: number, number2: number): number {
-    return number1 * number2;
+  multiply(numero2: Complex): Complex {
+    return new Complex(this.real * numero2.real - this.imaginaria * numero2.imaginaria,
+        this.real * numero2.imaginaria + this.imaginaria * numero2.real);
   }
 
   /**
    * Divide dos números
-   * @param {numer} number1
-   * @param {numer} number2
+   * @param {numer} numero2
    * @returns {numer} división
    */
-  divide(number1: number, number2: number): number {
-    return number1 / number2;
+  divide(numero2: Complex): Complex {
+    return new Complex((this.real*numero2.real + this.imaginaria*numero2.imaginaria) /
+    (Math.pow(this.real, 2) + Math.pow(numero2.imaginaria, 2)),
+    ((this.imaginaria * numero2.real - this.real * numero2.imaginaria)/
+    (Math.pow(this.real, 2) + Math.pow(numero2.imaginaria, 2))) );
+  }
+
+  /**
+   * Imprime los números complejos
+   * @returns {string} Númeor complejo
+   */
+  public toString(): string {
+    if (this.imaginaria >= 0) {
+      return `${this.real} + ${this.imaginaria}i`;
+    }
+    return `${this.real} - ${Math.abs(this.imaginaria)}i`;
   }
 }
+

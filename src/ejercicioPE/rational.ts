@@ -4,11 +4,15 @@ import {Arithmeticable} from "./clase";
  * Clase Rational
  */
 export class Rational implements Arithmeticable<Rational> {
+  /**
+   * Constructor
+   * @param {numer} numerador Numerador
+   * @param {number} denominador Denominador
+   */
   constructor(private numerador: number, private denominador: number) {
     this.numerador = numerador;
     this.denominador = denominador;
   }
-
 
   /**
    * Getter del denominador
@@ -68,5 +72,13 @@ export class Rational implements Arithmeticable<Rational> {
    */
   divide(number2: Rational): Rational {
     return new Rational(this.numerador * number2.getDenominador(), this.denominador * number2.getNumerador());
+  }
+
+  /**
+   * Imprime los números racionales
+   * @returns {string} Número racional
+   */
+  public toString(): string {
+    return `${this.numerador} / ${Math.abs(this.denominador)}`;
   }
 }

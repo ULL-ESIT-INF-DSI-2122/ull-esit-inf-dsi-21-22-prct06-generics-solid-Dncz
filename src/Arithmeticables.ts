@@ -60,14 +60,14 @@ class Complex implements Arithmeticable<Complex> {
 }
 
 const myComplexCollection = new ArithmeticableCollection<Complex>([
-  new Complex(1, 1),
-  new Complex(2, 2),
+  new Complex(4, 5),
+  new Complex(1, 2),
 ]);
 
-console.log(myComplexCollection.getNumberOfArithmeticables());
+// console.log(myComplexCollection.getNumberOfArithmeticables());
 
-console.log(myComplexCollection.getArithmeticable(0)!.toString());
-console.log(myComplexCollection.getArithmeticable(1)!.toString());
+// console.log(myComplexCollection.getArithmeticable(0)!.toString());
+// console.log(myComplexCollection.getArithmeticable(1)!.toString());
 
 console.log(myComplexCollection.getArithmeticable(0)!.add(
   myComplexCollection.getArithmeticable(1)!).toString());

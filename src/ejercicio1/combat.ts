@@ -34,7 +34,7 @@ export class Combat<T extends Pokemon | Marvel> {
   }
 
   /**
-   * Función que calcula la efectividad
+   * Función que calcula el ataque causado
    * @param {T} jugadorOponente Jugador del turno
    * @param {T} jugadorTurno Jugador oponente
    * @returns {number} Daño

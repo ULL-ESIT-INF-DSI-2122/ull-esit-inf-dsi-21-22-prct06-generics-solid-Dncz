@@ -56,21 +56,21 @@ export class Descifrado {
    * @returns {string} texto descifrado
    */
   public descifrado(): string {
-    let textoCifrado: string = "";
+    let textoDesifrado: string = "";
     let desplazamiento: number = 0;
     for (let index = 0; index < this.cesar.getTextoOriginal().length; index++) {
       for (let i = 0; i < this.cesar.getAlfabeto().length; i++) {
         if (this.compruebaCaracter(this.getCesar().getCaracterTextoOrig(index))) {
           if (this.getCesar().getCaracterTextoOrig(index) == this.getCesar().getCaracterAlfabeto(i)) {
             desplazamiento = this.calcularDesplazamiento(this.getCesar().getCaracterClave(index));
-            textoCifrado += this.getCesar().getCaracterAlfabeto((i - desplazamiento - 1 + this.cesar.getAlfabeto().length) % this.cesar.getAlfabeto().length);
+            textoDesifrado += this.getCesar().getCaracterAlfabeto((i - desplazamiento - 1 + this.cesar.getAlfabeto().length) % this.cesar.getAlfabeto().length);
           }
         } else {
-          textoCifrado += this.getCesar().getCaracterTextoOrig(index);
+          textoDesifrado += this.getCesar().getCaracterTextoOrig(index);
           break;
         }
       }
     }
-    return textoCifrado;
+    return textoDesifrado;
   }
 }
