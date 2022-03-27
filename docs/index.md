@@ -36,47 +36,47 @@ Para este ejercicio se ha creado seis clases: **Combat**, **Marvel**, **Pokedex*
     [pokedex.ts](https://github.com/ULL-ESIT-INF-DSI-2122/ull-esit-inf-dsi-21-22-prct06-generics-solid-Dncz/blob/bd86975063230d9d537d1d5f79271e8ee2ad6234/src/ejercicio1/pokedex.ts;)
     ```typescript
     export class Pokedex<T extends Pokemon | Marvel> {
-  /**
-   * Constructor de la lista
-   * @param {T[]} jugadores lista de los jugadores
-   */
-  constructor(private jugadores: T[]) {
-  }
+        /**
+         * Constructor de la lista
+        * @param {T[]} jugadores lista de los jugadores
+        */
+        constructor(private jugadores: T[]) {
+        }
 
-  /**
-   * Getter que devuelve el array de los
-   * personajes almacenados en la pokedex
-   * @returns {T[]} Pokedex
-   */
-  getPokedex(): T[] {
-    return this.jugadores;
-  }
+        /**
+         * Getter que devuelve el array de los
+        * personajes almacenados en la pokedex
+        * @returns {T[]} Pokedex
+        */
+        getPokedex(): T[] {
+            return this.jugadores;
+        }
 
-  /**
-   * Añade nuevos personajes a la lista
-   * @param {T} nuevosJugadores Nuevos personajes de diferentes o iguales universos
-   */
-  addJugador(nuevosJugadores: T) {
-    this.jugadores.push(nuevosJugadores);
-  }
+        /**
+         * Añade nuevos personajes a la lista
+        * @param {T} nuevosJugadores Nuevos personajes de diferentes o iguales universos
+        */
+        addJugador(nuevosJugadores: T) {
+            this.jugadores.push(nuevosJugadores);
+        }
 
-  /**
-   * Getter del número de personajes en la lista
-   * @returns {number} Tamaño de la lista
-   */
-  getNumeroJugadores(): number {
-    return this.jugadores.length;
-  }
+        /**
+         * Getter del número de personajes en la lista
+        * @returns {number} Tamaño de la lista
+        */
+        getNumeroJugadores(): number {
+            return this.jugadores.length;
+        }
 
-  /**
-   * Getter del jugador de una posición de la lista específica
-   * @param {number} indice Indice de la posición del personaje en la pokedex
-   * @returns {T} Jugador de tipo T
-   */
-  getJugador(indice: number): T {
-    return this.jugadores[indice];
-  }
-}
+        /**
+         * Getter del jugador de una posición de la lista específica
+        * @param {number} indice Indice de la posición del personaje en la pokedex
+        * @returns {T} Jugador de tipo T
+        */
+        getJugador(indice: number): T {
+            return this.jugadores[indice];
+        }
+    }
     ```
 
 * **Clase abstracta Fighter:** se define esta clase genérica que las clases de diferentes universos implementarán. En esta clase se contendrá las características comunes que comparten los personajes, como el nombre, el nivel de ataque, el nivel de defensa, el tipo al que pertenece o poder (según sus universo), la velocidad y la cantidad de vida. Por ello, la clase _Fighter_ tendrá los getter para cada atributo privado y un método abstracto que cada clase universo (Marvel y Pokemon) debe implementar, _frase_. En dicha función abstracta, se implementarán las frases de cada personaje.
