@@ -36,11 +36,8 @@ export class Rational implements Arithmeticable<Rational> {
    * @returns {Rational} suma
    */
   add(number2: Rational): Rational {
-    if (this.denominador != number2.getDenominador()) {
-      return new Rational(this.numerador * number2.getDenominador() + this.denominador * number2.getNumerador(),
-          this.denominador* number2.getDenominador());
-    }
-    return new Rational(this.numerador + number2.getNumerador(), number2.getDenominador());
+    return new Rational(this.numerador * number2.getDenominador() + this.denominador * number2.getNumerador(),
+        this.denominador* number2.getDenominador());
   }
 
   /**
@@ -49,11 +46,8 @@ export class Rational implements Arithmeticable<Rational> {
    * @returns {Rational} resta
    */
   substract(number2: Rational): Rational {
-    if (this.denominador != number2.getDenominador()) {
-      return new Rational(this.numerador * number2.getDenominador() - this.denominador * number2.getNumerador(),
-          this.denominador* number2.getDenominador());
-    }
-    return new Rational(this.numerador - number2.getNumerador(), number2.getDenominador());
+    return new Rational(this.numerador * number2.getDenominador() - this.denominador * number2.getNumerador(),
+        this.denominador* number2.getDenominador());
   }
 
   /**
