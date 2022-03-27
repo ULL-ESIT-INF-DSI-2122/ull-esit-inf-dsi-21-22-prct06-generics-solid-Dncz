@@ -1,6 +1,5 @@
 import 'mocha';
 import {expect} from 'chai';
-// import {Fighter} from '../src/ejercicio1/fighter';
 import {Pokedex} from '../src/ejercicio1/pokedex';
 import {Pokemon} from '../src/ejercicio1/pokemon';
 import {Marvel} from '../src/ejercicio1/marvel';
@@ -91,7 +90,6 @@ describe("ejercicio-1", () => {
     expect(mundo1).to.be.instanceOf(EfectividadMundo);
     expect(mundo1.mundoPokemon(Chamander.getPoder())).to.deep.equal(0.5);
     expect(mundo2.mundoMarvel(IronMan.getPoder())).to.be.equal(0.5);
-    // expect().to.be.equal();
   });
 
   it("Clase Combat:", () => {
@@ -106,6 +104,5 @@ describe("ejercicio-1", () => {
     expect(torneo3.getJugador1()).to.be.equal(BlackWidow);
     expect(torneo3.getJugador2()).to.be.equal(IronMan);
     expect(torneo3.start()).to.be.equal("Iron Man");
-    // expect().to.be.equal();
   });
 });

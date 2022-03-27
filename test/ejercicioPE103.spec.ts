@@ -20,7 +20,7 @@ describe("ejercicio-PE", () => {
     expect(complexCollection.getArithmeticable(0).add(complexCollection.getArithmeticable(1)).toString()).to.be.equal("5 + 7i");
     expect(complexCollection.getArithmeticable(0).substract(complexCollection.getArithmeticable(1)).toString()).to.be.equal("3 + 3i");
     expect(complexCollection.getArithmeticable(0).multiply(complexCollection.getArithmeticable(1)).toString()).to.be.equal("-6 + 13i");
-    expect(complexCollection.getArithmeticable(0).divide(complexCollection.getArithmeticable(1)).toString()).to.be.equal("-1.2 + 2.6i");
+    expect(complexCollection.getArithmeticable(0).divide(complexCollection.getArithmeticable(1)).toString()).to.be.equal("0.7 - 0.15i");
   });
   it("Clase Rational:", () => {
     expect(rationalCollection2.getArithmeticable(0)).to.be.instanceOf(Rational);
