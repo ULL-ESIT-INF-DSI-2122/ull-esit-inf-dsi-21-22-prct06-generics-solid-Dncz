@@ -1,9 +1,20 @@
 {
     "entryPoints": [
       "./src/ejercicio1/ejercicio-1.ts",
+      "./src/ejercicio1/combat.ts",
+      "./src/ejercicio1/efectividad.ts",
+      "./src/ejercicio1/fighter.ts",
+      "./src/ejercicio1/marvel.ts",
+      "./src/ejercicio1/pokedex.ts",
+      "./src/ejercicio1/pokemon.ts",
       "./src/ejercicio2/ejercicio-2.ts",
-      "./src/ejercicio3/ejercicio-2.ts",
-      "./src/ejercicio-PE/ejercicio-PE.ts"
+      "./src/ejercicio3/ejercicio-3.ts",
+      "./src/ejercicio3/cesar.ts",
+      "./src/ejercicio3/cifrar.ts",
+      "./src/ejercicio3/descifrar.ts",
+      "./src/ejercicioPE/clase.ts",
+      "./src/ejercicioPE/complex.ts",
+      "./src/ejercicioPE/rational.ts"
     ],
     "out": "./doc"
   }

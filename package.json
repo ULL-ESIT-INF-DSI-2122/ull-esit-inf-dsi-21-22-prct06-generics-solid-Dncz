@@ -2,11 +2,11 @@
   "name": "ull-esit-inf-dsi-21-22-prct06-generics-solid-dncz",
   "version": "1.0.0",
   "description": "**Práctica:** Práctica 6: Clases e interfaces genéricas. Principios SOLID.",
-  "main": "index.js",
+  "main": "ejercicio-3.js",
   "scripts": {
     "test": "mocha",
     "coverage": "nyc npm test",
-    "start": "tsc-watch --onSuccess \"node dist/ejercicio2/ejercicio-2.js\"",
+    "start": "tsc-watch --onSuccess \"node dist/ejercicio3/ejercicio-3.js\"",
     "doc": "typedoc"
   },
   "repository": {
@@ -26,10 +26,13 @@
     "@typescript-eslint/eslint-plugin": "^5.15.0",
     "@typescript-eslint/parser": "^5.15.0",
     "chai": "^4.3.6",
+    "coveralls": "^3.1.1",
     "eslint": "^8.11.0",
     "eslint-config-google": "^0.14.0",
     "mocha": "^9.2.2",
+    "nyc": "^15.1.0",
     "ts-node": "^10.7.0",
+    "tsc-watch": "^4.6.2",
     "typedoc": "^0.22.13"
   }
 }
