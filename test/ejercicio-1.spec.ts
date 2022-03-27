@@ -23,9 +23,13 @@ let pokedex = new Pokedex([Bulbasaur, Chamander, BlackWidow, IronMan, Psyduck, P
 let torneo1 = new Combat(pokedex.getJugador(0), pokedex.getJugador(1));
 let torneo2 = new Combat(pokedex.getJugador(1), pokedex.getJugador(2));
 let torneo3 = new Combat(pokedex.getJugador(2), pokedex.getJugador(3));
+let torneo4 = new Combat(pokedex.getJugador(3), pokedex.getJugador(5));
 
 let mundo1 = new EfectividadMundo(Bulbasaur.getPoder());
 let mundo2 = new EfectividadMundo(BlackWidow.getPoder());
+let mundo3 = new EfectividadMundo(Chamander.getPoder());
+let mundo4 = new EfectividadMundo(IronMan.getPoder());
+let mundo5 = new EfectividadMundo(Wanda.getPoder());
 
 describe("ejercicio-1", () => {
   it("Clase Pokemons:", () => {
@@ -90,6 +94,9 @@ describe("ejercicio-1", () => {
     expect(mundo1).to.be.instanceOf(EfectividadMundo);
     expect(mundo1.mundoPokemon(Chamander.getPoder())).to.deep.equal(0.5);
     expect(mundo2.mundoMarvel(IronMan.getPoder())).to.be.equal(0.5);
+    expect(mundo3.mundoPokemon(Pikachu.getPoder())).to.deep.equal(1);
+    expect(mundo4.mundoMarvel(IronMan.getPoder())).to.be.equal(1);
+    expect(mundo5.mundoMarvel(Hulk.getPoder())).to.be.equal(2);
   });
 
   it("Clase Combat:", () => {
@@ -100,9 +107,14 @@ describe("ejercicio-1", () => {
     expect(torneo2.getJugador1()).to.be.equal(Chamander);
     expect(torneo2.getJugador2()).to.be.equal(BlackWidow);
     expect(torneo2.start()).to.be.equal("Viuda negra");
+    expect(torneo2.ataque(Chamander, BlackWidow)).to.be.equal(21.666666666666668);
 
     expect(torneo3.getJugador1()).to.be.equal(BlackWidow);
     expect(torneo3.getJugador2()).to.be.equal(IronMan);
     expect(torneo3.start()).to.be.equal("Iron Man");
+
+    expect(torneo4.getJugador1()).to.be.equal(IronMan);
+    expect(torneo4.getJugador2()).to.be.equal(Pikachu);
+    expect(torneo4.start()).to.be.equal("Iron Man");
   });
 });
